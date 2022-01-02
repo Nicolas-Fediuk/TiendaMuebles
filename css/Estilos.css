@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap');
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    /* interlineado*/
+    line-height: 2;
+}
+html{
+    /* 1rem = 10 px */
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.text-center{
+    text-align: center;
+    padding:4rem 0 4rem 0;
+}
+h1{
+    font-size: 5rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+
+h1,h2,h3{
+    font-family: 'Playfair Display', serif;
+}
+
+ h1 span{
+    color: #037bc0;
+}
+.btn{
+    background-color: #8cbc00;
+    display: block;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 1rem;
+    transition: background-color 0.3s ease-out;
+}
+.btn:hover{
+    background-color: #769c02;
+}
+.Titulo-principal{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 4rem;
+}
+.contenedor-navegacion{
+    border-top:1px solid #e1e1e1 ;
+}
+
+.nav-principal{
+   
+    padding: 2rem 0 2rem 0;
+    display: flex;
+}
+
+.contenedor{
+    max-width: 100rem;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero{
+    height: 55rem;
+    background-image: url("../Imagenes/principal.jpg");
+    background-repeat: no-repeat;
+    /* se puede modificar con pixeles, primer numero eje x segudo eje y */
+    background-position: center center;
+    /* para que ocupe todo el lugar disponible*/
+    background-size: cover;
+}
+
+/* categoria productos */
+
+.listado-categoria{
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+
+/* imagenes responsig */
+img{
+    max-width: 100%;
+    /*para sacar los espacios*/
+    display: block;
+}
+.categorias h2{
+    text-align: center;
+}
+.categoria a{
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.categoria a:hover{
+    background: #037bc0;
+    color: white;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+/* sobre nosotros */
+
+.sobre-nosotros{
+    /* para dividir una imagen y un color */
+    background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100% )
+    , url("../Imagenes/nosotros.jpg");
+    /* izquierda 100% centrada */
+    background-position: left center;
+    padding:10rem 0 10rem 0;
+    background-repeat: no-repeat;
+    /* primero del gradient y despues de la imagen */
+    background-size: 100%, 75rem;
+    margin: 4rem 0 4rem 0;
+}
+
+/*.sobre-nosotros-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 4rem;
+}
+.texto-nosotros{
+    grid-column: 2 / 3;
+}*/
+
+.sobre-nosotros-grid{
+    display: flex;
+    justify-content: flex-end;
+}
+.texto-nosotros{
+    /* corta la caja del text por la mitad, el tamaño del elemento */
+    flex-basis: 46%;
+    color: white;
+}
+
+/* productos */
+.producto{
+    background-color: #037bc0;
+}
+.texto-producto{
+    text-align: center;
+    color:white;
+    padding: 2rem;
+}
+.texto-producto h3{
+    margin: 0;
+}
+.texto-producto p{
+    margin: 0 0 .5rem 0;
+}
+.texto-producto .precio{
+    font-size: 2.8rem;
+    font-weight: 900;
+}
+.listado-productos{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 2rem;
+}
+.producto:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+.producto:nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.producto:nth-child(3){
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+.producto:nth-child(4){
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.producto:nth-child(5){
+    grid-column-start: 3;
+    grid-column-end: 5;
+}
+.producto:nth-child(6){
+    grid-column-start: 5;
+    grid-column-end: 7;
+}
+
+
+
