@@ -44,9 +44,13 @@ h1,h2,h3{
     font-weight: 900;
     padding: 1rem;
     transition: background-color 0.3s ease-out;
+    text-align: center;
 }
 .btn:hover{
     background-color: #769c02;
+}
+.max-width-30{
+    max-width: 30rem;
 }
 .Titulo-principal{
     margin-top: 5rem;
@@ -149,6 +153,9 @@ img{
 }
 
 /* productos */
+.contenido-principal{
+    margin-bottom: 4rem;
+}
 .producto{
     background-color: #037bc0;
 }
@@ -175,10 +182,23 @@ img{
 .producto:nth-child(1){
     grid-column-start: 1;
     grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.producto:nth-child(1) img{
+    height: 50rem;
+    width: 100%;
+    object-fit: cover;
 }
 .producto:nth-child(2){
     grid-column-start: 1;
     grid-column-end: 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img{
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
 }
 .producto:nth-child(3){
     grid-column-start: 4;
@@ -196,6 +216,95 @@ img{
     grid-column-start: 5;
     grid-column-end: 7;
 }
+
+/* footer */
+footer{
+    border-top: 1px solid #e1e1e1;
+}
+footer .footer-enlases{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.footer-enlases h3{
+    margin:4rem 0 0.5rem 0;
+}
+.footer-enlases nav a{
+    display: block;
+}
+footer p{
+    text-align: center;
+    padding-top: 4rem;
+}
+
+/* sobre nosotros pagina*/
+.contenido-nosotros{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    column-gap: 4rem;
+    margin-bottom: 4rem;
+}
+.informacion-nosotros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* tienda */
+
+/*blog*/
+.contenedor-blog{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 4rem;
+    max-width: 100rem;
+    margin: 0 auto 0 auto;
+}
+.entrada{
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+.entrada:last-of-type{
+    border:none;
+}
+.entrada-meta{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.entrada-meta p span{
+    color:#037bc0;
+}
+
+/* entrada */
+
+.contenido-entrada-blog{
+    max-width: 60rem;
+    margin: 0 auto 0 auto;
+}
+
+/* galeria */
+
+.galeria{
+    max-width: 100rem;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+}
+.galeria img{
+    height: 20rem;
+    width: 40rem;
+    object-fit: cover;
+}
+
+
+
+
 
 
 
