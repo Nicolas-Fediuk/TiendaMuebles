@@ -45,9 +45,11 @@ h1,h2,h3{
     padding: 1rem;
     transition: background-color 0.3s ease-out;
     text-align: center;
+    border: noe;
 }
 .btn:hover{
     background-color: #769c02;
+    cursor: pointer;
 }
 .max-width-30{
     max-width: 30rem;
@@ -302,6 +304,40 @@ footer p{
     object-fit: cover;
 }
 
+/*contacto, formulario*/
+.formulario{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.formulario fieldset{
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+.formulario legend{
+    background-color: #037bc0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-bottom: 4rem;
+}
+.campo{
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo label{
+    /* para que tenga el mismo tamaño y esten alineados*/
+    flex-basis: 10rem;
+}
+/* todos los campos menos el de radio */
+.campo input:not([type="radio"]),
+textarea,
+select{
+    flex:1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
 
 
 
